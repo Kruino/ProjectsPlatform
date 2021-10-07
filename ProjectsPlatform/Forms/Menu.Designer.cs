@@ -29,7 +29,6 @@ namespace ProjectsPlatform
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Calculator = new System.Windows.Forms.Button();
             this.WeatherButton = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@ namespace ProjectsPlatform
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PasswordGeneratorButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,9 +48,10 @@ namespace ProjectsPlatform
             this.flowLayoutPanel1.Controls.Add(this.Calculator);
             this.flowLayoutPanel1.Controls.Add(this.WeatherButton);
             this.flowLayoutPanel1.Controls.Add(this.Base64);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 43);
+            this.flowLayoutPanel1.Controls.Add(this.PasswordGeneratorButton);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 26);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(337, 395);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(337, 412);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // Calculator
@@ -141,6 +142,19 @@ namespace ProjectsPlatform
             this.panel2.Size = new System.Drawing.Size(358, 442);
             this.panel2.TabIndex = 3;
             // 
+            // PasswordGeneratorButton
+            // 
+            this.PasswordGeneratorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.PasswordGeneratorButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PasswordGeneratorButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.PasswordGeneratorButton.FlatAppearance.BorderSize = 0;
+            this.PasswordGeneratorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PasswordGeneratorButton.Location = new System.Drawing.Point(171, 127);
+            this.PasswordGeneratorButton.Name = "PasswordGeneratorButton";
+            this.PasswordGeneratorButton.Size = new System.Drawing.Size(162, 118);
+            this.PasswordGeneratorButton.TabIndex = 3;
+            this.PasswordGeneratorButton.UseVisualStyleBackColor = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +187,7 @@ namespace ProjectsPlatform
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button Base64;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button PasswordGeneratorButton;
     }
 }
 

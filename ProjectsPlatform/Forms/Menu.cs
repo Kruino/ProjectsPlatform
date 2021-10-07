@@ -14,6 +14,7 @@ namespace ProjectsPlatform
             Calculator.BackgroundImage = Image.FromFile(@"../../Images/CalculatorImage.png");
             WeatherButton.BackgroundImage = Image.FromFile(@"../../Images/Weather.png");
             Base64.BackgroundImage = Image.FromFile(@"../../Images/base64.png");
+            PasswordGeneratorButton.BackgroundImage = Image.FromFile(@"../../Images/PasswordGenerator.png");
         }
         private void ExitButton_Click(object sender, EventArgs e)
         {

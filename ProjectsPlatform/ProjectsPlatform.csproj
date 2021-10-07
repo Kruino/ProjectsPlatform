@@ -75,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -104,6 +107,7 @@
     <Content Include="Images\CalculatorImage.ico" />
     <Content Include="Images\CalculatorImage.png" />
     <Content Include="Images\menu icon.png" />
+    <Content Include="Images\PasswordGenerator.png" />
     <Content Include="Images\Weather.ico" />
     <Content Include="Images\Weather.png" />
   </ItemGroup>
