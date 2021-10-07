@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectsPlatform
@@ -16,10 +8,9 @@ namespace ProjectsPlatform
     {
         public Menu()
         {
-            InitializeComponent();
-            
-            var Base = new Forms.Base64Converter();
-            this.CenterToScreen();
+            InitializeComponent();                     
+
+            this.CenterToScreen();                        
             Calculator.BackgroundImage = Image.FromFile(@"../../Images/CalculatorImage.png");
             WeatherButton.BackgroundImage = Image.FromFile(@"../../Images/Weather.png");
             Base64.BackgroundImage = Image.FromFile(@"../../Images/base64.png");
@@ -31,8 +22,15 @@ namespace ProjectsPlatform
 
         private void Calculator_Click(object sender, EventArgs e)
         {
+            
             Calculator calc = new Calculator();
             calc.Show();
+            this.Hide();
+        }
+        private void WeatherButton_Click(object sender, EventArgs e)
+        {
+            var weather = new Forms.Weather();
+            weather.Show();
             this.Hide();
         }
         private void Base64_Click(object sender, EventArgs e)
@@ -67,6 +65,11 @@ namespace ProjectsPlatform
         private void Panel_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
 
         

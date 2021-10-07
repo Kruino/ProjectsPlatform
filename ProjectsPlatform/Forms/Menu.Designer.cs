@@ -29,6 +29,7 @@ namespace ProjectsPlatform
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Calculator = new System.Windows.Forms.Button();
             this.WeatherButton = new System.Windows.Forms.Button();
@@ -36,12 +37,14 @@ namespace ProjectsPlatform
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.Controls.Add(this.Calculator);
             this.flowLayoutPanel1.Controls.Add(this.WeatherButton);
             this.flowLayoutPanel1.Controls.Add(this.Base64);
@@ -76,6 +79,7 @@ namespace ProjectsPlatform
             this.WeatherButton.Size = new System.Drawing.Size(162, 118);
             this.WeatherButton.TabIndex = 1;
             this.WeatherButton.UseVisualStyleBackColor = false;
+            this.WeatherButton.Click += new System.EventHandler(this.WeatherButton_Click);
             // 
             // Base64
             // 
@@ -129,17 +133,29 @@ namespace ProjectsPlatform
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(2, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(358, 442);
+            this.panel2.TabIndex = 3;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(362, 450);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.ShowIcon = false;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -156,6 +172,7 @@ namespace ProjectsPlatform
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Button Base64;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

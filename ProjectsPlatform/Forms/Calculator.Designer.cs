@@ -29,6 +29,7 @@ namespace ProjectsPlatform
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@ namespace ProjectsPlatform
             this.EqualsButton = new System.Windows.Forms.Button();
             this.input1 = new System.Windows.Forms.TextBox();
             this.input2 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,10 +183,19 @@ namespace ProjectsPlatform
             this.input2.Size = new System.Drawing.Size(218, 38);
             this.input2.TabIndex = 10;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(2, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(238, 222);
+            this.panel2.TabIndex = 11;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(242, 230);
             this.Controls.Add(this.input2);
             this.Controls.Add(this.input1);
@@ -195,6 +206,7 @@ namespace ProjectsPlatform
             this.Controls.Add(this.DivideButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Calculator";
             this.Text = "Form2";
@@ -219,5 +231,6 @@ namespace ProjectsPlatform
         private System.Windows.Forms.Button EqualsButton;
         private System.Windows.Forms.TextBox input1;
         private System.Windows.Forms.TextBox input2;
+        private System.Windows.Forms.Panel panel2;
     }
 }

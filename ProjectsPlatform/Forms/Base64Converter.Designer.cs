@@ -29,10 +29,11 @@ namespace ProjectsPlatform.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Base64Converter));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Errorlabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.Errorlabel = new System.Windows.Forms.Label();
             this.DecodeButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.InputBox = new System.Windows.Forms.RichTextBox();
@@ -40,6 +41,7 @@ namespace ProjectsPlatform.Forms
             this.FileNameLabel = new System.Windows.Forms.Label();
             this.FileTypeLabel = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,15 +57,6 @@ namespace ProjectsPlatform.Forms
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseUp);
-            // 
-            // Errorlabel
-            // 
-            this.Errorlabel.AutoSize = true;
-            this.Errorlabel.ForeColor = System.Drawing.Color.Red;
-            this.Errorlabel.Location = new System.Drawing.Point(12, 158);
-            this.Errorlabel.Name = "Errorlabel";
-            this.Errorlabel.Size = new System.Drawing.Size(0, 13);
-            this.Errorlabel.TabIndex = 16;
             // 
             // label1
             // 
@@ -89,6 +82,15 @@ namespace ProjectsPlatform.Forms
             this.ExitButton.Text = "X";
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // Errorlabel
+            // 
+            this.Errorlabel.AutoSize = true;
+            this.Errorlabel.ForeColor = System.Drawing.Color.Red;
+            this.Errorlabel.Location = new System.Drawing.Point(12, 158);
+            this.Errorlabel.Name = "Errorlabel";
+            this.Errorlabel.Size = new System.Drawing.Size(0, 13);
+            this.Errorlabel.TabIndex = 16;
             // 
             // DecodeButton
             // 
@@ -143,6 +145,7 @@ namespace ProjectsPlatform.Forms
             // FileNameLabel
             // 
             this.FileNameLabel.AutoSize = true;
+            this.FileNameLabel.BackColor = System.Drawing.Color.White;
             this.FileNameLabel.Location = new System.Drawing.Point(286, 27);
             this.FileNameLabel.Name = "FileNameLabel";
             this.FileNameLabel.Size = new System.Drawing.Size(57, 13);
@@ -152,6 +155,7 @@ namespace ProjectsPlatform.Forms
             // FileTypeLabel
             // 
             this.FileTypeLabel.AutoSize = true;
+            this.FileTypeLabel.BackColor = System.Drawing.Color.White;
             this.FileTypeLabel.Location = new System.Drawing.Point(286, 129);
             this.FileTypeLabel.Name = "FileTypeLabel";
             this.FileTypeLabel.Size = new System.Drawing.Size(34, 13);
@@ -165,10 +169,19 @@ namespace ProjectsPlatform.Forms
             this.NameBox.Size = new System.Drawing.Size(92, 20);
             this.NameBox.TabIndex = 16;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(2, 7);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(393, 200);
+            this.panel2.TabIndex = 17;
+            // 
             // Base64Converter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(397, 209);
             this.Controls.Add(this.Errorlabel);
             this.Controls.Add(this.NameBox);
@@ -179,9 +192,12 @@ namespace ProjectsPlatform.Forms
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.DecodeButton);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            
             this.Name = "Base64Converter";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Base64Converter_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -202,5 +218,6 @@ namespace ProjectsPlatform.Forms
         private System.Windows.Forms.Label FileTypeLabel;
         private System.Windows.Forms.Label Errorlabel;
         private System.Windows.Forms.TextBox NameBox;
+        private System.Windows.Forms.Panel panel2;
     }
 }

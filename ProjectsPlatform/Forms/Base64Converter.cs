@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectsPlatform.Forms
@@ -24,8 +20,7 @@ namespace ProjectsPlatform.Forms
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            Menu men = new Menu();
-            men.Show();
+            Application.OpenForms["Menu"].Show();
         }
         private void InputBox_DragDrop(object sender, DragEventArgs e)
         {
@@ -210,6 +205,11 @@ namespace ProjectsPlatform.Forms
         private void Panel_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void Base64Converter_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,8 +15,7 @@ namespace ProjectsPlatform
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            Menu men = new Menu();
-            men.Show();
+            Application.OpenForms["Menu"].Show();
         }
 
         string selectedbutton = "";      
